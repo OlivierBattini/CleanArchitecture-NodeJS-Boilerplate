@@ -22,15 +22,17 @@ I organized the project structure according to my understanding of the Clean Arc
     ├── 📁 src
     │   ├── main.ts                 # Application Entry Point / Composition Root
     │   ├── 📁 config               # Configuration
-    │   ├── 📁 ioc                  # Inversion of control container and bindings
-    │   ├── 📁 modules              # Business and Domain features by subdomain
-    │   │   └── 📁 users            # Users subdomain
-    │   │       ├── 📁 common       # Interfaces, abstractions and other...
-    │   │       ├── 📁 createUser   # Controller, Use case interactor, Request & Response objects...
-    │   │       └── 📁 loginUser    # Controller, Use case interactor, Request & Response objects...
-    │   └── 📁 shared       
+    │   ├── 📁 tasks                # Application Subdomain
+    │   │   ├── 📁 createTask       # 1 folder by use case containing controller,
+    │   │   ├── 📁 deleteTask         I/O ports, use case and errors
+    │   │   └── 📁 ...
+    │   └── 📁 shared               # Common/shared code
+    │       ├── 📁 application
+    │       ├── 📁 domain
+    │       ├── 📁 infrastructure
+    │       └── 📁 utils
     │
-    ├── 📁 tests                    # Tests
+    ├── 📁 __tests__                # Unit & E2E tests...
     └── ...
 
 <br/>
